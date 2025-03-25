@@ -1,6 +1,6 @@
 .product-list{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     gap: 5px;
     width: 90%;
     margin: auto;
@@ -24,7 +24,7 @@
 }
 .product-card img{
     width: 180px;
-    height: 170px;
+    height: 200px;
     margin: auto;
 }
 .product-card:hover{
@@ -55,4 +55,20 @@
     margin: auto;
     border: none;
     border-radius: 8px;
+}
+.empty-cart button{
+    width: 250px;
+    height: 45px;
+    background-color: orangered;
+    border-radius: 9px;
+    font-size: 20px;
+}
+.empty-cart{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 50%;
+    height: 200px;
+    text-align: center;
+    padding: 40px 2px;
+    border-radius: 12px;
+    margin: auto;
 }

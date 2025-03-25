@@ -9,19 +9,25 @@ const Cart = () => {
   
 
  const {items:cartItems, tempItems, totalPrice} = useSelector((state)=>(state.cart))
+ const navigate = useNavigate();
+ const dispatch = useDispatch();
+
 
   if (!cartItems || cartItems.length === 0) {
-    return <h2>Your Cart is Empty</h2>; // Show a message when the cart is empty
+    return (
+      <div className='empty-cart'>
+        <h2>Your Cart is Empty</h2>
+        <button onClick={()=>navigate("/")}>Back to Shopping</button>
+      </div>
+    );
   }
-const navigate = useNavigate();
-const dispatch = useDispatch();
 
   function handleRemoveitem(id){
-    alert(id)
+    alert("your item is removed")
     dispatch(removeFromCart(id))
   }
   const handleUpdateQuantity = (id,quantity)=>{
-   console.log(id,quantity)
+   
    dispatch(updateQuantity({id,quantity}))
   }
   const handleApplyUpdate = ()=>{
@@ -54,7 +60,7 @@ const dispatch = useDispatch();
                   handleUpdateQuantity(el.id, parseInt(e.target.value))
                 }
               />
-              <button onClick={handleApplyUpdate}>update</button>
+              <button onClick={()=>handleApplyUpdate(el.id)}>update</button>
               <button onClick={() => handleRemoveitem(el.id)}>remove</button>
             </div>
           </div>
