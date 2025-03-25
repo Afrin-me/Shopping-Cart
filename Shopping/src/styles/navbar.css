@@ -1,0 +1,19 @@
+.navbar{
+display: flex;
+justify-content: space-between;
+background-color: gray;
+padding: 2px 5px;
+}
+
+.link{
+display: flex;
+justify-content:space-evenly;
+margin-top: 12px;
+gap: 20px;
+padding: 8px;
+font-size: 22px;
+}
+.link a{
+    text-decoration: none;
+    color: beige;
+}
