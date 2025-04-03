@@ -1,6 +1,6 @@
 .product-list{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 5px;
     width: 90%;
     margin: auto;
@@ -9,7 +9,7 @@
 .product-card{
    display: flex;
    flex-direction: column; 
-   width: 300px;
+   width: 240px;
    text-align: center;
    border: 1px solid lightgray;
    border-radius: 8px;
@@ -23,8 +23,8 @@
     background-color: orangered;
 }
 .product-card img{
-    width: 180px;
-    height: 200px;
+    width: 150px;
+    height: 170px;
     margin: auto;
 }
 .product-card:hover{
